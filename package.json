@@ -38,7 +38,9 @@
     "build:js": "react-scripts build",
     "start:css": "postcss src/styles/tailwind.css -o src/styles/index.css -w",
     "build:css": "postcss src/styles/tailwind.css -o src/styles/index.css --env production",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -58,6 +60,11 @@
   "proxy": "http://localhost:8080",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.0.5",
+    "@storybook/addon-actions": "^5.3.17",
+    "@storybook/addon-links": "^5.3.17",
+    "@storybook/addons": "^5.3.17",
+    "@storybook/preset-create-react-app": "^2.1.1",
+    "@storybook/react": "^5.3.17",
     "@types/graphql": "^14.2.3",
     "apollo": "^2.17.2",
     "onchange": "^6.1.0",
